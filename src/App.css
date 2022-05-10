@@ -48,3 +48,8 @@ body {
 .nav-items li a.active {
   border-bottom: 1px solid #0290ff;
 }
+
+.member-btn {
+  text-align: center;
+  vertical-align: middle;
+}
