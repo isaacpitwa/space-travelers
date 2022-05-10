@@ -74,6 +74,7 @@ body {
 
 .rocket img {
   width: 300px;
+  height: 225px;
 }
 
 .rocket .content button {
@@ -111,4 +112,19 @@ body {
   height: 36px;
   margin-top: 24px;
   background-color: #ededed;
+}
+
+.rocket .content p span {
+  background-color: #18a2b8;
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 12px;
+  margin-right: 8px;
+  border-radius: 8px;
+}
+
+.rocket .content .btn-cancel {
+  border: 1px solid #b0b4b9;
+  background-color: #fff;
+  color: #b0b4b9;
 }
