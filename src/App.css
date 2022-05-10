@@ -114,15 +114,16 @@ body {
 }
 
 .rocket .content p span {
-  background-color: #18A2B8;
+  background-color: #18a2b8;
   color: #fff;
   padding: 4px 8px;
   font-size: 12px;
   margin-right: 8px;
   border-radius: 8px;
 }
-.rocket .content .btn-cancel{
-  border: 1px solid #B0B4B9;
+
+.rocket .content .btn-cancel {
+  border: 1px solid #b0b4b9;
   background-color: #fff;
-  color:#B0B4B9;
+  color: #b0b4b9;
 }
