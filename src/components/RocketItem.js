@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { reserveRocket } from '../Redux/Rockets/rockets';
+import { reserveRocket, cancelReservation } from '../Redux/Rockets/rockets';
 
 function RocketItem(props) {
   const dispatch = useDispatch();
@@ -31,8 +31,8 @@ function RocketItem(props) {
     dispatch(reserveRocket(rocket));
   };
 
-  const cancelReservation = () => {
-    dispatch(reserveRocket(rocket));
+  const cancelBooking = () => {
+    dispatch(cancelReservation(rocket));
   };
   return (
     <li className="rocket" key={id}>
@@ -45,7 +45,7 @@ function RocketItem(props) {
           {rocket.reserved ? <span>Reserved</span> : null}
           {description}
         </p>
-        {rocket.reserved ? <button type="button" onClick={cancelReservation}>Cancel Reservation</button> : <button type="button" onClick={bookRocket}>Reserve Rocket</button>}
+        {rocket.reserved ? <button type="button" onClick={cancelBooking}>Cancel Reservation</button> : <button type="button" onClick={bookRocket}>Reserve Rocket</button>}
       </div>
     </li>
   );
