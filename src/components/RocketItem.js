@@ -1,7 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { reserveRocket } from '../Redux/Rockets/rockets';
 
 function RocketItem(props) {
+  const dispatch = useDispatch();
   const { rocket } = props;
   const {
     id,
@@ -24,6 +27,9 @@ function RocketItem(props) {
 
   };
 
+  const bookRocket = () => {
+    dispatch(reserveRocket(rocket));
+  };
   return (
     <li className="rocket" key={id}>
       <div className="image-container">
@@ -32,7 +38,7 @@ function RocketItem(props) {
       <div className="content">
         <h4>{name}</h4>
         <p>{description}</p>
-        <button type="button">Reserve Rocket</button>
+        <button type="button" onClick={bookRocket}>Reserve Rocket</button>
       </div>
     </li>
   );
