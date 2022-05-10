@@ -12,7 +12,7 @@ const Profile = () => {
         <h4>My Rockets</h4>
         <ul className="rockets-list">
           {
-            rockets.map((rocket) => <li key={rocket.id}>{rocket.name}</li>)
+            rockets.map((rocket) => <li key={rocket.id} className="rocket-item">{rocket.name}</li>)
         }
         </ul>
       </div>

@@ -137,6 +137,7 @@ body {
   align-items: flex-start;
   justify-content: space-between;
 }
+
 .profile-container .mission {
   width: 50%;
 }
@@ -144,15 +145,19 @@ body {
 .profile-container .rockets {
   width: 50%;
 }
+
 .rockets-list {
   list-style: none;
   padding: 0;
   border: 1px solid #f4f4f4;
+  border-radius: 4px;
 }
-.rockets-list  li {
+
+.rockets-list .rocket-item {
   padding: 16px;
   border-bottom: 1px solid #f4f4f4;
 }
-.rockets-list  li:last-child{
+
+.rockets-list li:last-child {
   border: 0;
 }
