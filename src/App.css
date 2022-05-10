@@ -53,3 +53,62 @@ body {
   text-align: center;
   vertical-align: middle;
 }
+
+/* Rocket styles */
+.rocket-list {
+  padding: 24px 3%;
+}
+
+.rocket {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 18px;
+}
+
+.rocket .image-container {
+  width: 300px;
+  margin-right: 16px;
+  background-color: #ededed;
+  height: 225px;
+}
+
+.rocket img {
+  width: 300px;
+}
+
+.rocket .content button {
+  border: 0;
+  background-color: #0290ff;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+.rocket .content button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.rocket .name-placeholder {
+  width: 180px;
+  height: 24px;
+  background-color: #ededed;
+}
+
+.rocket .desc-placeholder {
+  margin: 16px 0;
+}
+
+.rocket .desc-line {
+  width: 60vw;
+  height: 16px;
+  margin: 4px 0;
+  background-color: #ededed;
+}
+
+.rocket .btn-placeholder {
+  width: 140px;
+  height: 36px;
+  margin-top: 24px;
+  background-color: #ededed;
+}
