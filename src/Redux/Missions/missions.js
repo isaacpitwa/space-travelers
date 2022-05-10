@@ -8,13 +8,12 @@ export default function missionsReducer(state = [], action) {
     case GET_MISSION:
       return action.payload;
     case JOIN_MISSION:
-      return [
-        ...state.map((mission) => {
-          if (mission.id === action.payload.misssionId) {
-            return { ...mission, reserved: action.payload.status };
-          }
-          return mission;
-        }),
+      return [...state.map((mission) => {
+        if (mission.mission_id === action.payload.missionId) {
+          return { ...mission, reserved: action.payload.status };
+        }
+        return mission;
+      }),
       ];
     default:
       return state;
@@ -38,7 +37,7 @@ export const getMission = () => async (dispatch) => {
 export const joinMission = (missionId, status) => ({
   type: JOIN_MISSION,
   payload: {
-    mission: missionId,
-    status: Boolean(status),
+    missionId,
+    status: Boolean(Number(status)),
   },
 });

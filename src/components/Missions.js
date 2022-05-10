@@ -10,7 +10,7 @@ function Missions() {
 
   const joinMissionHandler = (event) => {
     const reserve = event.target.getAttribute('data-reserved');
-    const missionId = event.target.getAttribute('id');
+    const missionId = event.target.getAttribute('data-id');
     dispatch(joinMission(missionId, reserve));
   };
 
@@ -29,21 +29,44 @@ function Missions() {
             <td>{mission.mission_name}</td>
             <td>{mission.description}</td>
             <td className="member-btn">
-              <Button variant="secondary" as="input" type="button" value="Not a member" />
-              {' '}
+              {mission.reserved ? (
+                <Button
+                  variant="primary"
+                  as="input"
+                  type="button"
+                  value="Active Member"
+                />
+              ) : (
+                <Button
+                  variant="secondary"
+                  as="input"
+                  type="button"
+                  value="NOT A MEMBER"
+                />
+              )}
             </td>
             <td className="member-btn">
-              <Button
-                variant="outline-secondary"
-                as="input"
-                type="button"
-                value="Join mission"
-                id={mission.mission_id}
-                data-id={mission.mission_id}
-                data-reserved={0}
-                onClick={joinMissionHandler}
-              />
-              {' '}
+              {mission.reserved ? (
+                <Button
+                  variant="outline-danger"
+                  as="input"
+                  type="button"
+                  value="Leave Mission"
+                  data-id={mission.mission_id}
+                  data-reserved={0}
+                  onClick={joinMissionHandler}
+                />
+              ) : (
+                <Button
+                  variant="outline-secondary"
+                  as="input"
+                  type="button"
+                  value="Join Mission"
+                  data-id={mission.mission_id}
+                  data-reserved={1}
+                  onClick={joinMissionHandler}
+                />
+              )}
             </td>
           </tr>
         ))}
