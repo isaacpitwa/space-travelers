@@ -68,7 +68,7 @@ body {
 .rocket .image-container {
   width: 300px;
   margin-right: 16px;
-  background-color: #f4f4f4;
+  background-color: #ededed;
   height: 225px;
 }
 
@@ -92,7 +92,7 @@ body {
 .rocket .name-placeholder {
   width: 180px;
   height: 24px;
-  background-color: #f4f4f4;
+  background-color: #ededed;
 }
 
 .rocket .desc-placeholder {
@@ -102,12 +102,13 @@ body {
 .rocket .desc-line {
   width: 60vw;
   height: 16px;
-  margin: 8px 0;
-  background-color: #f4f4f4;
+  margin: 4px 0;
+  background-color: #ededed;
 }
 
 .rocket .btn-placeholder {
   width: 140px;
   height: 36px;
-  background-color: #f4f4f4;
+  margin-top: 24px;
+  background-color: #ededed;
 }
