@@ -1,22 +1,39 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function RocketItem(props) {
+  const { rocket } = props;
   const {
     id,
     name,
     type,
-    flickr_images,
+    flickrImages,
     description,
-  } = props;
+  } = rocket;
+
+  RocketItem.propTypes = {
+    rocket:
+      PropTypes.objectOf(
+        {
+          id: PropTypes.number,
+          name: PropTypes.string,
+          type: PropTypes.string,
+          flickrImages: PropTypes.array,
+          description: PropTypes.string,
+        },
+      ).isRequired,
+
+  };
+
   return (
-    <div className="rocket">
-      <img src={flickr_images[0]} alt={name} />
-      <div className='content'>
+    <li className="rocket" key={id}>
+      <img src={flickrImages[0]} alt={name} />
+      <div className="content">
         <h4>{name}</h4>
         <p>{description}</p>
-        <button type='button'>Reserve Rocket</button>
+        <button type="button">Reserve Rocket</button>
       </div>
-    </div>
+    </li>
   );
 }
 
