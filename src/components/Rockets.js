@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchRockets } from '../Redux/Rockets/rockets';
+import RocketItem from './RocketItem';
 
 function Rockets() {
   const dispatch = useDispatch();
@@ -9,7 +10,9 @@ function Rockets() {
     dispatch(fetchRockets());
   }, []);
   return (
-    <h2>Rockets page</h2>
+    <ul className="rocket-list">
+      { rockets.map((rocket) => <RocketItem rocket={rocket} key={rocket.id} />)}
+    </ul>
   );
 }
 
