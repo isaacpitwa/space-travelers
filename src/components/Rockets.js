@@ -8,8 +8,10 @@ function Rockets() {
   const dispatch = useDispatch();
   const rockets = useSelector((state) => state.rockets);
   useEffect(() => {
-    dispatch(fetchRockets());
-  }, []);
+    if (rockets.length === 0) {
+      dispatch(fetchRockets());
+    }
+  }, [dispatch]);
   return (
     <ul className="rocket-list">
       { typeof (rockets) === 'string' ? (
