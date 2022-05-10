@@ -8,7 +8,7 @@ export function fetchedRockets(rockets) {
     name: rocket.rocket_name,
     type: rocket.rocket_type,
     flickrImages: rocket.flickr_images,
-    description: rocket.description
+    description: rocket.description,
   }));
   return {
     type: FETCHED_ROCKETS,
