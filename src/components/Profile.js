@@ -1,14 +1,23 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
-const Profile = () => (
-  <div className="conatiner">
-    <div className="missions">
-      <h4>My Missions</h4>
+const Profile = () => {
+  const rockets = useSelector((state) => state.rockets.filter((rocket) => rocket.reserved));
+  return (
+    <div className="profile-container">
+      <div className="missions">
+        <h4>My Missions</h4>
+      </div>
+      <div className="rockets">
+        <h4>My Rockets</h4>
+        <ul className="rockets-list">
+          {
+            rockets.map((rocket) => <li key={rocket.id}>{rocket.name}</li>)
+        }
+        </ul>
+      </div>
     </div>
-    <div className="Rockets">
-      <h4>My Missions</h4>
-    </div>
-  </div>
-);
+  );
+};
 
 export default Profile;
