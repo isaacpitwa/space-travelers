@@ -30,6 +30,10 @@ function RocketItem(props) {
   const bookRocket = () => {
     dispatch(reserveRocket(rocket));
   };
+
+  const cancelReservation = () => {
+    dispatch(reserveRocket(rocket));
+  };
   return (
     <li className="rocket" key={id}>
       <div className="image-container">
@@ -37,8 +41,11 @@ function RocketItem(props) {
       </div>
       <div className="content">
         <h4>{name}</h4>
-        <p>{description}</p>
-        <button type="button" onClick={bookRocket}>Reserve Rocket</button>
+        <p>
+          {rocket.reserved ? <span>Reserved</span> : null}
+          {description}
+        </p>
+        {rocket.reserved ? <button type="button" onClick={cancelReservation}>Cancel Reservation</button> : <button type="button" onClick={bookRocket}>Reserve Rocket</button>}
       </div>
     </li>
   );
