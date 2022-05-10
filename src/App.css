@@ -53,3 +53,25 @@ body {
   text-align: center;
   vertical-align: middle;
 }
+
+/* Rocket styles */
+.rocket-list {
+  padding: 24px 3%;
+}
+
+.rocket {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 18px;
+}
+.rocket img {
+  width: 300px;
+  margin-right: 16px;
+}
+.rocket .content button {
+  border: 0;
+  background-color: #0290ff;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
