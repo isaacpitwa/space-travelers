@@ -1,10 +1,18 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
+import { joinMission } from '../Redux/Missions/missions';
 
 function Missions() {
   const missions = useSelector((state) => state.missions);
+  const dispatch = useDispatch();
+
+  const joinMissionHandler = (event) => {
+    const reserve = event.target.getAttribute('data-reserved');
+    const missionId = event.target.getAttribute('id');
+    dispatch(joinMission(missionId, reserve));
+  };
 
   return (
     <Table striped bordered hover size="sm">
@@ -21,11 +29,20 @@ function Missions() {
             <td>{mission.mission_name}</td>
             <td>{mission.description}</td>
             <td className="member-btn">
-              <Button variant="secondary" as="input" type="button" value="not a member" />
+              <Button variant="secondary" as="input" type="button" value="Not a member" />
               {' '}
             </td>
             <td className="member-btn">
-              <Button variant="outline-secondary" as="input" type="button" value="Join Mission" />
+              <Button
+                variant="outline-secondary"
+                as="input"
+                type="button"
+                value="Join mission"
+                id={mission.mission_id}
+                data-id={mission.mission_id}
+                data-reserved={0}
+                onClick={joinMissionHandler}
+              />
               {' '}
             </td>
           </tr>
