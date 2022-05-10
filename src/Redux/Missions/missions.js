@@ -1,6 +1,6 @@
 import fetchMissions from './apiMissions';
 
-const GET_MISSION = '   ';
+const GET_MISSION = 'SpaceTravelers/Missions/GET_MISSION';
 
 export default function missionsReducer(state = [], action) {
   switch (action.type) {

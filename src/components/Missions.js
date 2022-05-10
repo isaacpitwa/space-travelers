@@ -1,15 +1,10 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
-import { getMission } from '../Redux/Missions/missions';
 
 function Missions() {
-  const dispatch = useDispatch();
   const missions = useSelector((state) => state.missions);
-  useEffect(() => {
-    dispatch(getMission());
-  }, []);
 
   return (
     <Table striped bordered hover size="sm">
