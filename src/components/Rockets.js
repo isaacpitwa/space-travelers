@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchRockets } from '../Redux/Rockets/rockets';
 import RocketItem from './RocketItem';
+import LoadingRockets from './LoadingRockets';
 
 function Rockets() {
   const dispatch = useDispatch();
@@ -11,7 +12,12 @@ function Rockets() {
   }, []);
   return (
     <ul className="rocket-list">
-      { rockets.map((rocket) => <RocketItem rocket={rocket} key={rocket.id} />)}
+      { typeof (rockets) === 'string' ? (
+        <p>
+          {' '}
+          <LoadingRockets />
+        </p>
+      ) : rockets.map((rocket) => <RocketItem rocket={rocket} key={rocket.id} />)}
     </ul>
   );
 }

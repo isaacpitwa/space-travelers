@@ -1,6 +1,7 @@
 import ApiClient from '../../service/Apiclient';
 
 const FETCHED_ROCKETS = 'spaceTravelers/rockets/FETCHED_ROCKETS';
+const FETCHING_ROCKETS = 'spaceTravelers/rockets/FETCHING_ROCKETS';
 
 export function fetchedRockets(rockets) {
   const formattedRockets = rockets.map((rocket) => ({
@@ -15,14 +16,24 @@ export function fetchedRockets(rockets) {
     rockets: formattedRockets,
   };
 }
+export function fetching() {
+  return {
+    type: FETCHING_ROCKETS,
+  };
+}
 
 export const fetchRockets = () => async (dispatch) => {
-  const response = await ApiClient.fetchRockets();
-  dispatch(fetchedRockets(response));
+  dispatch(fetching());
+  setTimeout(async () => {
+    const response = await ApiClient.fetchRockets();
+    dispatch(fetchedRockets(response));
+  }, 10000);
 };
 
 export default function reducer(state = [], action = {}) {
   switch (action.type) {
+    case FETCHING_ROCKETS:
+      return 'fetching Rockets...';
     case FETCHED_ROCKETS:
       return [...action.rockets];
     default:
