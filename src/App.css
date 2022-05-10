@@ -64,10 +64,12 @@ body {
   flex-direction: row;
   margin-bottom: 18px;
 }
+
 .rocket img {
   width: 300px;
   margin-right: 16px;
 }
+
 .rocket .content button {
   border: 0;
   background-color: #0290ff;

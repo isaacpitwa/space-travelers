@@ -6,7 +6,6 @@ function RocketItem(props) {
   const {
     id,
     name,
-    type,
     flickrImages,
     description,
   } = rocket;
