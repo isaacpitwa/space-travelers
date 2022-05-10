@@ -1,8 +1,15 @@
+import ApiClient from '../../service/Apiclient';
+
 const FETCHED_ROCKETS = 'spaceTravelers/rockets/FETCHED_ROCKETS';
-import ApiClient from '../../service/Apiclient'
 
 export function fetchedRockets(rockets) {
-  const formattedRockets = rockets.map((rocket)=>{return {id: rocket.id,name:rocket.name, type: rocket.type,flickr_images:rocket.flickr_images }});
+  const formattedRockets = rockets.map((rocket) => ({
+    id: rocket.id,
+    name: rocket.rocket_name,
+    type: rocket.rocket_type,
+    flickr_images: rocket.flickr_images,
+    description: rocket.description
+  }));
   return {
     type: FETCHED_ROCKETS,
     rockets: formattedRockets,
@@ -13,7 +20,6 @@ export const fetchRockets = () => async (dispatch) => {
   const response = await ApiClient.fetchRockets();
   dispatch(fetchedRockets(response));
 };
-
 
 export default function reducer(state = [], action = {}) {
   switch (action.type) {
