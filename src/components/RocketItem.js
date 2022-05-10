@@ -15,13 +15,14 @@ function RocketItem(props) {
 
   RocketItem.propTypes = {
     rocket:
-      PropTypes.objectOf(
+      PropTypes.shape(
         {
           id: PropTypes.number,
           name: PropTypes.string,
           type: PropTypes.string,
-          flickrImages: PropTypes.array,
+          flickrImages: PropTypes.arrayOf(PropTypes.string),
           description: PropTypes.string,
+          reserved: PropTypes.bool,
         },
       ).isRequired,
 

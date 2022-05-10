@@ -13,10 +13,7 @@ function Rockets() {
   return (
     <ul className="rocket-list">
       { typeof (rockets) === 'string' ? (
-        <p>
-          {' '}
-          <LoadingRockets />
-        </p>
+        <LoadingRockets />
       ) : rockets.map((rocket) => <RocketItem rocket={rocket} key={rocket.id} />)}
     </ul>
   );
