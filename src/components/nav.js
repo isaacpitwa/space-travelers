@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+import { getMission } from '../Redux/Missions/missions';
 
 function Nav() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getMission());
+  }, [dispatch]);
+
   return (
     <nav className="nav-container">
       <div className="nav-brand">

@@ -1,15 +1,18 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
-import { getMission } from '../Redux/Missions/missions';
+import { joinMission } from '../Redux/Missions/missions';
 
 function Missions() {
-  const dispatch = useDispatch();
   const missions = useSelector((state) => state.missions);
-  useEffect(() => {
-    dispatch(getMission());
-  }, []);
+  const dispatch = useDispatch();
+
+  const joinMissionHandler = (event) => {
+    const reserve = event.target.getAttribute('data-reserved');
+    const missionId = event.target.getAttribute('data-id');
+    dispatch(joinMission(missionId, reserve));
+  };
 
   return (
     <Table striped bordered hover size="sm">
@@ -26,12 +29,44 @@ function Missions() {
             <td>{mission.mission_name}</td>
             <td>{mission.description}</td>
             <td className="member-btn">
-              <Button variant="secondary" as="input" type="button" value="not a member" />
-              {' '}
+              {mission.reserved ? (
+                <Button
+                  variant="primary"
+                  as="input"
+                  type="button"
+                  value="Active Member"
+                />
+              ) : (
+                <Button
+                  variant="secondary"
+                  as="input"
+                  type="button"
+                  value="NOT A MEMBER"
+                />
+              )}
             </td>
             <td className="member-btn">
-              <Button variant="outline-secondary" as="input" type="button" value="Join Mission" />
-              {' '}
+              {mission.reserved ? (
+                <Button
+                  variant="outline-danger"
+                  as="input"
+                  type="button"
+                  value="Leave Mission"
+                  data-id={mission.mission_id}
+                  data-reserved={0}
+                  onClick={joinMissionHandler}
+                />
+              ) : (
+                <Button
+                  variant="outline-secondary"
+                  as="input"
+                  type="button"
+                  value="Join Mission"
+                  data-id={mission.mission_id}
+                  data-reserved={1}
+                  onClick={joinMissionHandler}
+                />
+              )}
             </td>
           </tr>
         ))}
