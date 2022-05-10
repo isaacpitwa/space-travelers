@@ -6,6 +6,7 @@ import Nav from './components/nav';
 import Profile from './components/Profile';
 import Rockets from './components/Rockets';
 import NotMatch from './pages/NotFound';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
