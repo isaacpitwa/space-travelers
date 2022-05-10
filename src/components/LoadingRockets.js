@@ -3,6 +3,7 @@ import React from 'react';
 const LoadingRockets = () => (
   <>
     <LoadingRocket />
+    <LoadingRocket />
   </>
 );
 

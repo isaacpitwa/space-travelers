@@ -64,7 +64,8 @@ body {
   flex-direction: row;
   margin-bottom: 18px;
 }
-.rocket .image-container{
+
+.rocket .image-container {
   width: 300px;
   margin-right: 16px;
   background-color: #f4f4f4;
@@ -88,20 +89,23 @@ body {
   opacity: 0.8;
 }
 
-.rocket .name-placeholder{
+.rocket .name-placeholder {
   width: 180px;
   height: 24px;
   background-color: #f4f4f4;
 }
+
 .rocket .desc-placeholder {
   margin: 16px 0;
 }
+
 .rocket .desc-line {
   width: 60vw;
   height: 16px;
   margin: 8px 0;
   background-color: #f4f4f4;
 }
+
 .rocket .btn-placeholder {
   width: 140px;
   height: 36px;
