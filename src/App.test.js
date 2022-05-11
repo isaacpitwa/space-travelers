@@ -1,7 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
 import store from './Redux/configureStore';
 import App from './App';
 
@@ -16,5 +17,17 @@ const appRender = () => render(
 describe('App', () => {
   it('renders without crashing', () => {
     appRender();
+  });
+  it('renders the rocket list', () => {
+    appRender();
+    expect(screen.getByText('Rockets')).toBeInTheDocument();
+  });
+  it('renders the mission list', () => {
+    appRender();
+    expect(screen.getByText('Missions')).toBeInTheDocument();
+  });
+  it('renders the profile', () => {
+    appRender();
+    expect(screen.getByText('My Profile')).toBeInTheDocument();
   });
 });
