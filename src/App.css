@@ -142,22 +142,26 @@ body {
   width: 50%;
 }
 
-.profile-container .rockets {
+.profile-container .rockets,
+.profile-container .missions {
   width: 50%;
 }
 
-.rockets-list {
+.rockets-list,
+.missions-list {
   list-style: none;
   padding: 0;
   border: 1px solid #f4f4f4;
   border-radius: 4px;
 }
 
-.rockets-list .rocket-item {
+.rockets-list .rocket-item,
+.missions-list .mission-item {
   padding: 16px;
   border-bottom: 1px solid #f4f4f4;
 }
 
-.rockets-list li:last-child {
+.rockets-list li:last-child,
+.missions-list li:last-child {
   border: 0;
 }
