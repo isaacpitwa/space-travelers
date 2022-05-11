@@ -7,11 +7,11 @@ const Profile = () => {
 
   return (
     <div className="profile-container">
-      <div className="rockets">
+      <div className="missions">
         <h4>My Missions</h4>
-        <ul className="rockets-list">
+        <ul className="missions-list">
           {missions.map((missions) => (
-            <li key={missions.mission_id} className="rocket-item">
+            <li key={missions.mission_id} className="mission-item">
               {missions.mission_name}
             </li>
           ))}
