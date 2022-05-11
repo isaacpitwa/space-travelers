@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import store from './Redux/configureStore';
 import App from './App';
@@ -29,5 +29,11 @@ describe('App', () => {
   it('renders the profile', () => {
     appRender();
     expect(screen.getByText('My Profile')).toBeInTheDocument();
+  });
+  it('Simulates a click on the Missions page', () => {
+    appRender();
+    const mission = screen.getByText('Missions');
+    fireEvent.click(mission);
+    expect(screen.getByText('Description')).toBeInTheDocument();
   });
 });
