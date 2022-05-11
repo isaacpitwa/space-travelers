@@ -16,7 +16,7 @@ In this project, we work with a real live data from the SpaceX API. We built a w
 
 ## Live Demo
 
-Coming soon!
+Watch the live [Demo](https://space-travelers-juan-isaac.herokuapp.com/) of the Space Travelers
 
 ## Run it
 
