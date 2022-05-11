@@ -1,46 +1,73 @@
-# Getting Started with Create React App and Redux
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+# Space Travelers 
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+In this project, we work with a real live data from the SpaceX API. We built a web application for a company that provides commercial and scientific space travel services. The application allows the users to book rockets and join selected space missions.
 
-### `npm start`
+## Built With
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React
+- Redux
+- JavaScript
+- APIs
+- Gitflow
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Live Demo
 
-### `npm test`
+Coming soon!
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Run it
 
-### `npm run build`
+Use the following steps to run this Project locally:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Create a directory
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Open the terminal
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Run this command:
+`git clone git@github.com:Juanse7793/space-travelers.git`
 
-### `npm run eject`
+- Enter in to the folder:
+`cd space-travelers`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Open the folder with a code editor (VS Code preferred)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Run in the terminal `npm install` to install all dependencies
+- Run in the terminal `npm start` to launch the application
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Authors
 
-## Learn More
+👤 **Juan Sebastian Sotomayor**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- GitHub: [@Juanse7793](https://github.com/Juanse7793)
+- Twitter: [@Juanse77930](https://twitter.com/Juanse77930)
+- LinkedIn: [Juan Sebastian Sotomayor](https://www.linkedin.com/in/juansebastiansotomayor/)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+👤 **Isaac Pitwa**
+
+- GitHub: [@isaacpitwa](https://github.com/isaacpitwa)
+- Twitter: [@isaacpitwa](https://twitter.com/isaacpitwa)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/isaac-pitwa)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/isaacpitwa/space-travelers/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Hat tip to anyone whose code was used
+- Inspiration
+
+
+## 📝 License
+
+This project is [MIT](./LICENSE) licensed.
