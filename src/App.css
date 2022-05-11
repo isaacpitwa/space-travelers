@@ -1,39 +1,167 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
-}
-
-.App-header {
-  min-height: 100vh;
+/* Navigation styles */
+.nav-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 16px 3%;
+  border-bottom: 1px solid #cdcdcd;
 }
 
-.App-link {
-  color: rgb(112, 76, 182);
+.nav-brand {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+.nav-brand img {
+  width: 100px;
+}
+
+.nav-brand h1 {
+  margin-left: 16px;
+}
+
+.nav-items {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.nav-items li {
+  padding: 4px 16px;
+}
+
+.nav-items li:last-child {
+  border-left: 1px solid #000;
+}
+
+.nav-items li a {
+  text-decoration: none;
+  color: #0290ff;
+}
+
+.nav-items li a.active {
+  border-bottom: 1px solid #0290ff;
+}
+
+.member-btn {
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Rocket styles */
+.rocket-list {
+  padding: 24px 3%;
+}
+
+.rocket {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 18px;
+}
+
+.rocket .image-container {
+  width: 300px;
+  margin-right: 16px;
+  background-color: #ededed;
+  height: 225px;
+}
+
+.rocket img {
+  width: 300px;
+  height: 225px;
+}
+
+.rocket .content button {
+  border: 0;
+  background-color: #0290ff;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+.rocket .content button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.rocket .name-placeholder {
+  width: 180px;
+  height: 24px;
+  background-color: #ededed;
+}
+
+.rocket .desc-placeholder {
+  margin: 16px 0;
+}
+
+.rocket .desc-line {
+  width: 60vw;
+  height: 16px;
+  margin: 4px 0;
+  background-color: #ededed;
+}
+
+.rocket .btn-placeholder {
+  width: 140px;
+  height: 36px;
+  margin-top: 24px;
+  background-color: #ededed;
+}
+
+.rocket .content p span {
+  background-color: #18a2b8;
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 12px;
+  margin-right: 8px;
+  border-radius: 8px;
+}
+
+.rocket .content .btn-cancel {
+  border: 1px solid #b0b4b9;
+  background-color: #fff;
+  color: #b0b4b9;
+}
+
+/* My profile page */
+
+.profile-container {
+  display: flex;
+  padding: 24px 3%;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.profile-container .mission {
+  width: 50%;
+}
+
+.profile-container .rockets,
+.profile-container .missions {
+  width: 50%;
+}
+
+.rockets-list,
+.missions-list {
+  list-style: none;
+  padding: 0;
+  border: 1px solid #f4f4f4;
+  border-radius: 4px;
+}
+
+.rockets-list .rocket-item,
+.missions-list .mission-item {
+  padding: 16px;
+  border-bottom: 1px solid #f4f4f4;
+}
+
+.rockets-list li:last-child,
+.missions-list li:last-child {
+  border: 0;
 }
