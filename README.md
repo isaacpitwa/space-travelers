@@ -50,7 +50,7 @@ Use the following steps to run this Project locally:
 
 - GitHub: [@isaacpitwa](https://github.com/isaacpitwa)
 - Twitter: [@isaacpitwa](https://twitter.com/isaacpitwa)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/isaac-pitwa)
+- LinkedIn: [Isaac Pitwa](https://linkedin.com/in/isaac-pitwa)
 
 ## 🤝 Contributing
 
