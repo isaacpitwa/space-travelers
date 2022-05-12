@@ -165,3 +165,7 @@ body {
 .missions-list li:last-child {
   border: 0;
 }
+
+.separation {
+  padding-right: 40px;
+}
